@@ -22,7 +22,15 @@ public class Range {
         }
         return result;
     }
+    // Создание диапазона
+    public Range(int start, int finish) {
+        this.start = start;
+        this.finish = finish;
+    }
+    public Range() {
+    }
 
+    //Пересечение диапазона
     public static String intersection(Range r1, Range r2) {
 
         boolean flag = false;
@@ -48,14 +56,6 @@ public class Range {
             result = flag ? r1.toString() + " и " + r2.toString() + " пересекаются" : r1.toString() + " и " + r2.toString() + " не пересекаются";
         }
         return result;
-    }
-
-    public Range(int start, int finish) {
-        this.start = start;
-        this.finish = finish;
-    }
-
-    public Range() {
     }
 
     @Override
